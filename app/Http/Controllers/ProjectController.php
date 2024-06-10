@@ -47,7 +47,7 @@ class ProjectController extends Controller
         $project->description = $request->input('description');
         $project->goal_amount = $request->input('goal_amount');
         $project->current_amount = 0;
-        $project->status = 'incomplete'; // Додано значення за замовчуванням для статусу
+        $project->status = 'incomplete';
         $project->save();
 
         return redirect()->route('projects.show', $project);
